@@ -1,0 +1,226 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApp-DB006A5D-3BCF-41CD-92E5-0D13656032A7</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0-preview.3.24172.9" />
+        <PackageReference Include="Microsoft.OpenApi" Version="1.6.14" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.1" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ContainerPort Include="80" Type="tcp" />
+    </ItemGroup>
+  
+    <ItemGroup>
+      <ProjectReference Include="..\App.BLL\App.BLL.csproj" />
+      <ProjectReference Include="..\App.Contracts.BLL\App.Contracts.BLL.csproj" />
+      <ProjectReference Include="..\App.DAL.EF\App.DAL.EF.csproj" />
+      <ProjectReference Include="..\App.DTO\App.DTO.csproj" />
+      <ProjectReference Include="..\Base.Resources\Base.Resources.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Public\Controllers\" />
+      <Folder Include="Areas\Public\ViewModels\" />
+      <Folder Include="Areas\Public\Views\" />
+      <Folder Include="TagHelpers\" />
+      <Folder Include="Views\Shop\" />
+      <Folder Include="wwwroot\uploads\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Contests\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contests\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contests\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contests\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contests\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categoris\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categoris\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categoris\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categoris\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categoris\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Warehouses\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Warehouses\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Warehouses\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Warehouses\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Warehouses\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WarehouseParts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WarehouseParts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WarehouseParts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WarehouseParts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\WarehouseParts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Parts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Parts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Parts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Parts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Parts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartRatings\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartRatings\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartRatings\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartRatings\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartRatings\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartInBuilds\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartInBuilds\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartInBuilds\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartInBuilds\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartInBuilds\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartCategories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartCategories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartCategories\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartCategories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PartCategories\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\OrderItems\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\OrderItems\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\OrderItems\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\OrderItems\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\OrderItems\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Orders\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Orders\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Orders\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Orders\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Orders\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardRatings\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardRatings\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardRatings\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardRatings\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardRatings\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardParts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardParts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardParts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardParts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\KeyboardParts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Categories\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Keyboards\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Keyboards\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Keyboards\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Keyboards\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Keyboards\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categoris\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categoris\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categoris\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categoris\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categoris\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Categories\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\_CreateEdit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contests\_DetailDelete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardBuild\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardBuild\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardBuild\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardBuild\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardBuild\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardParts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardParts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardParts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardParts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardParts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardRatings\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardRatings\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardRatings\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardRatings\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\KeyboardRatings\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Keyboards\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Keyboards\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Keyboards\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Keyboards\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Keyboards\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderItems\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderItems\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderItems\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderItems\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\OrderItems\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Orders\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Orders\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Orders\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Orders\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Orders\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartCategories\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartCategories\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartCategories\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartCategories\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartCategories\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartInBuilds\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartInBuilds\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartInBuilds\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartInBuilds\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartInBuilds\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartRatings\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartRatings\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartRatings\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartRatings\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\PartRatings\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Parts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Parts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Parts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Parts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Parts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\RefreshTokens\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\RefreshTokens\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\RefreshTokens\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\RefreshTokens\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\RefreshTokens\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\WarehouseParts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\WarehouseParts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\WarehouseParts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\WarehouseParts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\WarehouseParts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Warehouses\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Warehouses\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Warehouses\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Warehouses\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Warehouses\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\_ViewStart.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Contests\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contests\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contests\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contests\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contests\Index.cshtml" />
+    </ItemGroup>
+
+    <PropertyGroup>
+      <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+</Project>
